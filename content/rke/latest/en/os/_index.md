@@ -157,6 +157,16 @@ If using Red Hat Enterprise Linux, Oracle Linux or CentOS, you cannot use the `r
    reboot
    ```
 
+
+Also, ensure that parameters below in `sshd_config` of RHEL OpenSSH are set
+
+```
+AllowTcpForwarding yes
+AllowStreamLocalForwarding yes
+DisableForwarding no
+```
+
+
 #### Using upstream Docker
 If you are using upstream Docker, the package name is `docker-ce` or `docker-ee`. You can check the installed package by executing:
 
